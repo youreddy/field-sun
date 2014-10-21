@@ -1,7 +1,7 @@
 {
-  "name": "tabsapp",
+  "name": "field-sun-app",
   "version": "1.0.0",
-  "description": "tabsApp: An Ionic project",
+  "description": "field-sun-app: An Ionic project",
   "dependencies": {
     "gulp": "^3.5.6",
     "gulp-sass": "^0.7.1",
