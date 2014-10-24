@@ -1,4 +1,4 @@
-angular.module('starter.controllers', [])
+angular.module('starter.controllers', ['ionic.contrib.ui.tinderCards'])
 
 .controller('EntryCtrl', function($scope, $state) {
   
@@ -7,6 +7,8 @@ angular.module('starter.controllers', [])
       
     };
 })
+
+
 
 .controller('CompanyCtrl', function($scope, $state) {
   
