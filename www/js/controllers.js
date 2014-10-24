@@ -7,3 +7,11 @@ angular.module('starter.controllers', [])
       
     };
 })
+
+.controller('CompanyCtrl', function($scope, $state) {
+  
+    $scope.signInCompany = function(user) {
+      $state.go('app.profile');
+      
+    };
+})
