@@ -7,7 +7,7 @@
 
   - __Product Owner__: Greg Ferrell
   - __Scrum Master__: Josh Lankford
-  - __Development Team Members__: Urvashi Reddy, Derek Chen
+  - __Development Team Members__: Urvashi Reddy
 
 ## Table of Contents
 
