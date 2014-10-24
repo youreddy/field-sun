@@ -16,14 +16,19 @@ angular.module('starter', ['ionic', 'starter.controllers'])
 
 .config(function($stateProvider, $urlRouterProvider) {
   
-  $urlRouterProvider.otherwise("/entry");
+  $urlRouterProvider.otherwise("/");
   
   $stateProvider
 
     .state('entry', {
-      url: "/entry",
+      url: "/",
       templateUrl: "templates/entry.html",
       controller: 'EntryCtrl'
+    })
+
+    .state('signup', {
+      url: "/signup",
+      templateUrl: "templates/signup.html",
     })
 
     .state('app', {
