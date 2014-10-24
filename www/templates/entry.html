@@ -1,0 +1,18 @@
+<ion-view title="ENGNR">
+  <ion-content>
+    <div class="list">
+      <label class="item item-input">
+        <input type="text" placeholder="LinkedIn Email" ng-model="user.email">
+      </label>
+      <label class="item item-input">
+        <input type="password" placeholder="Password" ng-model="user.password">
+      </label>
+    </div>
+    <div class="padding">
+      <button nav-clear class="button button-block button-balanced" ng-click="signIn(user)" >
+        Log in
+      </button>
+      <button class="button button-block button-dark">Sign Up</button>
+    </div>
+  </ion-content>
+</ion-view>
