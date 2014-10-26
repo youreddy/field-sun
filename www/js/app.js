@@ -1,4 +1,4 @@
-angular.module('starter', ['ionic', 'starter.controllers'])
+angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -12,6 +12,29 @@ angular.module('starter', ['ionic', 'starter.controllers'])
       StatusBar.styleDefault();
     }
   });
+})
+
+.directive('stopEvent', function () {
+    return {
+        restrict: 'A',
+        link: function (scope, element, attr) {
+            element.bind('touchmove', function (e) {
+                e.stopPropagation();
+            });
+        }
+    };
+ })
+
+.directive('noScroll', function($document) {
+  return {
+    restrict: 'A',
+    link: function($scope, $element, $attr) {
+      $document.on('touchmove', function(e) {
+        console.log('hi lol');
+        e.preventDefault();
+      });
+    }
+  }
 })
 
 .config(function($stateProvider, $urlRouterProvider) {
@@ -69,7 +92,6 @@ angular.module('starter', ['ionic', 'starter.controllers'])
         }
       }
     })
-
 
   // if none of the above states are matched, use this as the fallback
 });
