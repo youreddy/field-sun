@@ -373,7 +373,7 @@
           //console.log(window.getComputedStyle(secondCard));
           newTop = Math.max(0, Math.min(max, max - (max * Math.abs(amt))));
           //console.log(top);
-          console.log(newTop);
+          // console.log(newTop);
           card.style.transform = card.style.webkitTransform = 'translate3d(0, ' + newTop + 'px, 0)';
         };
 
