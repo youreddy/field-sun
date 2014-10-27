@@ -9,11 +9,11 @@ td-cards {
 td-card {
   position: absolute;
   left: 50%;
-  margin-top: 80px;
-  margin-bottom: 40px;
-  margin-left: -125px;
-  width: 250px;
-  height: 200px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: -150px;
+  width: 300px;
+  height: 400px;
 
   background: white;
   border: 1px solid #999;
@@ -22,6 +22,8 @@ td-card {
 }
 
 td-card .image {
+  font-size: 20px;
+  font-family: Verdana, Geneva, sans-serif;
   position: relative;
 }
 
