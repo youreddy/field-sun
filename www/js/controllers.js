@@ -35,6 +35,15 @@ angular.module('starter.controllers', ['ionic.contrib.ui.tinderCards'])
       });
   }
 
+  $scope.getUsers = function() {
+    console.log("calling getUsers");
+    Cards.getUsers()
+      .then(function(result) {
+        console.log("USERS GET", result)
+        $scope.cards = Array.prototype.slice.call(result, 0);
+      });
+  }
+
   $scope.cardDestroyed = function(index) {
     $scope.cards.splice(index, 1);
   };
@@ -45,7 +54,8 @@ angular.module('starter.controllers', ['ionic.contrib.ui.tinderCards'])
     $scope.cards.push(angular.extend({}, newCard));
   }
 
-  $scope.getCompanies();
+  // $scope.getCompanies();
+  $scope.getUsers();
 })
 
 .controller('CardCtrl', function($scope, TDCardDelegate) {

@@ -32,10 +32,21 @@ angular.module('starter.services', [])
     });
   };
 
+  var getUsers = function() {
+    return $http({
+      method: 'GET',
+      url: 'https://still-fjord-2818.herokuapp.com/api/users'
+    })
+    .then(function (resp) {
+      return resp.data;
+    });
+  };
+
   return {
     getAll: getAll,
     getMatches: getMatches,
-    getCompanies: getCompanies
+    getCompanies: getCompanies,
+    getUsers: getUsers
   }
 
 });
