@@ -25,7 +25,17 @@ angular.module('starter.services', [])
   var getCompanies = function() {
     return $http({
       method: 'GET',
-      url: 'http://localhost:8080/api/companies'
+      url: 'https://still-fjord-2818.herokuapp.com/api/companies'
+    })
+    .then(function (resp) {
+      return resp.data;
+    });
+  };
+
+  var getUsers = function() {
+    return $http({
+      method: 'GET',
+      url: 'https://still-fjord-2818.herokuapp.com/api/users'
     })
     .then(function (resp) {
       return resp.data;
@@ -35,7 +45,8 @@ angular.module('starter.services', [])
   return {
     getAll: getAll,
     getMatches: getMatches,
-    getCompanies: getCompanies
+    getCompanies: getCompanies,
+    getUsers: getUsers
   }
 
 });
